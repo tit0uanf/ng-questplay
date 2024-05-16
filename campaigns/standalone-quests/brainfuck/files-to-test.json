@@ -1,5 +1,0 @@
-[
-    "src/contracts/brainfuck_vm.cairo",
-    "src/logic/program.cairo",
-    "src/logic/utils.cairo"
-]
