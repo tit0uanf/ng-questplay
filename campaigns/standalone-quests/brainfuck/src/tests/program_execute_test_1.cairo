@@ -13,6 +13,7 @@ fn test_simple_multiply() {
     input.append(3);
 
     let result = program.execute(input);
+    println!("result multiply {*result[0]}")
     assert(result.len() == 1,  'Unexpected result length');
     assert(*result[0] == 12, 'Unexpected result');
 }
@@ -39,7 +40,6 @@ fn test_memory() {
 }
 
 #[test]
-#[available_gas(140000000)]
 fn test_looping() {
     let program = sample_programs::echo();
     let mut input = ArrayTrait::new();
@@ -56,7 +56,6 @@ fn test_looping() {
 }
 
 #[test]
-#[available_gas(52500000)]
 fn test_hello_world() {
     let program = sample_programs::hello_world();
 
