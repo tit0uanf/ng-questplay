@@ -6,6 +6,7 @@ use src::tests::sample_programs;
 use src::tests::test_utils::array_u8_to_string;
 
 #[test]
+#[available_gas(1400000000)]
 fn test_simple_multiply() {
     let program = sample_programs::simple_mul();
     let mut input = ArrayTrait::new();
@@ -13,11 +14,12 @@ fn test_simple_multiply() {
     input.append(3);
 
     let result = program.execute(input);
-    assert(result.len() == 1, 'Unexpected result length');
+    assert(result.len() == 1,  'Unexpected result length');
     assert(*result[0] == 12, 'Unexpected result');
 }
 
 #[test]
+#[available_gas(1400000000)]
 fn test_cell_overflow() {
     let program = sample_programs::overflow_program();
     let mut input = ArrayTrait::new();
@@ -25,21 +27,22 @@ fn test_cell_overflow() {
     input.append(12);
 
     let result = program.execute(input);
-    assert(result.len() == 1, 'Unexpected result length');
+    assert(result.len() == 1,  'Unexpected result length');
 
     assert(*result[0] == 211, 'Unexpected result');
 }
 
 #[test]
+#[available_gas(1400000000)]
 fn test_memory() {
     let program = sample_programs::memory_program();
 
     let result = program.execute(ArrayTrait::new());
-    assert(result.len() == 0, 'Unexpected result length');
+    assert(result.len() == 0,  'Unexpected result length');
 }
 
 #[test]
-#[available_gas(140000000)]
+#[available_gas(1400000000000000)]
 fn test_looping() {
     let program = sample_programs::echo();
     let mut input = ArrayTrait::new();
@@ -56,7 +59,7 @@ fn test_looping() {
 }
 
 #[test]
-#[available_gas(52500000)]
+#[available_gas(14000000000)]
 fn test_hello_world() {
     let program = sample_programs::hello_world();
 

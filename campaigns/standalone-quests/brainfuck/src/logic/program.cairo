@@ -30,8 +30,7 @@ fn array_to_dict(array: @Array<u8>) -> Felt252Dict<u8> {
 fn dict_to_array(ref dict: Felt252Dict<u8>) -> Array<u8> {
     let mut new_array: Array<u8> = Default::default();
     let mut index: u32 = 0;
-    let mut isEnd = false;
-    while (isEnd == false) {
+    while (index <= 255) {
         let new_value = dict.get(index.into());
         new_array.append(new_value);
         index += 1;
