@@ -9,5 +9,5 @@ trait IBrainfuckVM<TContractState> {
 mod BrainfuckVM {
     // Implement BrainfuckVM Here
     #[storage]
-    struct Storage { }
+    struct Storage {}
 }

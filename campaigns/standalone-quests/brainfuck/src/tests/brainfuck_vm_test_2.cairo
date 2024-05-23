@@ -3,11 +3,7 @@ use array::ArrayTrait;
 use src::contracts::brainfuck_vm::IBrainfuckVMDispatcherTrait;
 
 use src::tests::sample_programs;
-use src::tests::test_utils::{ 
-    array_u8_to_string, 
-    assert_array,
-    deploy_brainfuck_vm
-};
+use src::tests::test_utils::{array_u8_to_string, assert_array, deploy_brainfuck_vm};
 
 #[test]
 #[available_gas(6000000)]
@@ -15,7 +11,7 @@ fn test_deploy() {
     let vm = deploy_brainfuck_vm();
     let program_id = vm.deploy(sample_programs::hello_world());
 
-    let program = vm.get_program(program_id);   
+    let program = vm.get_program(program_id);
     assert_array(program, sample_programs::hello_world());
 }
 
@@ -33,8 +29,8 @@ fn test_multiple_deploy() {
     let id1 = vm.deploy(sample_programs::hello_world());
     let id2 = vm.deploy(sample_programs::echo());
 
-    let program1 = vm.get_program(id1);   
-    let program2 = vm.get_program(id2);   
+    let program1 = vm.get_program(id1);
+    let program2 = vm.get_program(id2);
 
     assert_array(program1, sample_programs::hello_world());
     assert_array(program2, sample_programs::echo());
@@ -68,7 +64,6 @@ fn test_call_2() {
     let return_data = vm.call(program_id, input);
     let return_string = array_u8_to_string(return_data);
     assert(return_string == 'Brain', 'Unexpected return data');
-
 }
 
 
