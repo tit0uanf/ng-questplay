@@ -8,37 +8,40 @@ quest test 1
 testing src ...
 running 9 tests
 Program : -<,<,>[[->-<]
+Program : -<,<,>x
 Program : ,>,<[>[->+>+<<]>[-<+>]<<-]>>>.
-Program : -<,<,>[->-<]]
 Program : ,>,<[>[->+>+<<]>[-<+>]<<-]>>>.
 input 4
 input 3
 test src::tests::program_check_test_1::test_check_invalid_program_2 ... ok (gas usage est.: 1981020)
-Program : [+[[+][]+]],[[->+<]>.>,]
-test src::tests::program_check_test_1::test_check_invalid_program_1 ... ok (gas usage est.: 2010210)
-Program : -<,<,>x
 test src::tests::program_check_test_1::test_check_invalid_program_3 ... ok (gas usage est.: 1271880)
+Program : [+[[+][]+]],[[->+<]>.>,]
+Program : -<,<,>[->-<]]
 Program : ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.
+test src::tests::program_check_test_1::test_check_invalid_program_1 ... ok (gas usage est.: 2010210)
 Program : -<,<,>[->-<]<[->>-<<]>>.
+Program : <+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-[]
 input 32
 input 12
-Program : <+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-[]
 
 
 test src::tests::program_check_test_1::test_check ... ok (gas usage est.: 20331230)
 Program : [+[[+][]+]],[[->+<]>.>,]
+test src::tests::program_execute_test_1::test_simple_multiply ... fail (gas usage est.: 43149310)
 \xf3
-test src::tests::program_execute_test_1::test_looping ... fail (gas usage est.: 133796360)
 Program : ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.
-test src::tests::program_execute_test_1::test_hello_world ... fail (gas usage est.: 51047630)
-test src::tests::program_execute_test_1::test_simple_multiply ... fail (gas usage est.: 4294198100)
-test src::tests::program_execute_test_1::test_memory ... fail (gas usage est.: 4294938350)
-test src::tests::program_execute_test_1::test_cell_overflow ... fail (gas usage est.: 4293866050)
-failures:
-   src::tests::program_execute_test_1::test_looping - Panicked with 0x4f7574206f6620676173 ('Out of gas').
-   src::tests::program_execute_test_1::test_hello_world - Panicked with 0x4f7574206f6620676173 ('Out of gas').
-   src::tests::program_execute_test_1::test_simple_multiply - Panicked with 0x4f7574206f6620676173 ('Out of gas').
-   src::tests::program_execute_test_1::test_memory - Panicked with 0x4f7574206f6620676173 ('Out of gas').
-   src::tests::program_execute_test_1::test_cell_overflow - Panicked with 0x4f7574206f6620676173 ('Out of gas').
+test src::tests::program_execute_test_1::test_memory ... fail (gas usage est.: 56753440)
+test src::tests::program_execute_test_1::test_cell_overflow ... fail (gas usage est.: 57897140)
+H
+e
+l
+l
+o
 
-Error: test result: FAILED. 4 passed; 5 failed; 0 ignored
+W
+o
+r
+l
+d
+!
+test src::tests::program_execute_test_1::test_hello_world ... fail (gas usage est.: 180218840)
